@@ -1,11 +1,10 @@
-﻿namespace Oxide.Ext.RStats
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Reflection;
-    using Oxide.Core;
-    using Oxide.Core.Extensions;
+﻿using System;
+using Oxide.Core;
+using Oxide.Core.Extensions;
 
+
+namespace Oxide.Ext.RStats
+{
     class Printer
     {
         public static void logInfo(string msg)
