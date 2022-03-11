@@ -5,7 +5,7 @@ using Oxide.Core.Extensions;
 
 namespace Oxide.Ext.RStats
 {
-    class Printer
+    public class Printer
     {
         public static void logInfo(string msg)
         {
@@ -13,7 +13,7 @@ namespace Oxide.Ext.RStats
         }
     }
 
-    public class RStats : Extension
+    public class RStatsExt : Extension
     {
         public override string Name => "RStats";
 
@@ -21,7 +21,7 @@ namespace Oxide.Ext.RStats
 
         public override VersionNumber Version => new VersionNumber(0, 0, 1);
 
-        public RStats(ExtensionManager manager) : base(manager)
+        public RStatsExt(ExtensionManager manager) : base(manager)
         {
         }
 
@@ -30,7 +30,7 @@ namespace Oxide.Ext.RStats
             Printer.logInfo("loaded");
         }
 
-        public override void OnShutdown()
+        public override void Unload()
         {
             Printer.logInfo("unloaded");
         }
