@@ -7,9 +7,21 @@ namespace Oxide.Ext.RStats
 {
     public class Printer
     {
-        public static void logInfo(string msg)
+        private static string tag = "[RStats]";
+
+        public static void logInfo(string format, params object[] args)
         {
-            Interface.Oxide.LogInfo("[RStats] {0}", msg);
+            Interface.Oxide.LogInfo("{0} {1}", tag, String.Format(format, args));
+        }
+
+        public static void logWarn(string format, params object[] args)
+        {
+            Interface.Oxide.LogWarning("{0} {1}", tag, String.Format(format, args));
+        }
+
+        public static void logErr(string format, params object[] args)
+        {
+            Interface.Oxide.LogError("{0} {1}", tag, String.Format(format, args));
         }
     }
 
