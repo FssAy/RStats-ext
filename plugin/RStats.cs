@@ -10,9 +10,11 @@ namespace Oxide.Plugins
 
     class RStats : RustPlugin
     {
-        private void Init()
+        private StatsClient client;
+
+        void OnServerInitialized(bool initial)
         {
-            Printer.logInfo("plugin loaded");
+            client = new StatsClient();
         }
     }
 }
