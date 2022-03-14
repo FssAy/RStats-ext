@@ -95,8 +95,8 @@ namespace Oxide.Ext.RStats
                 new Argument("hostname", ConVar.Server.hostname),
                 new Argument("level", ConVar.Server.level),
                 new Argument("seed", ConVar.Server.seed.ToString()),
-                new Argument("worldsize", ConVar.Server.worldsize.ToString()),
-                new Argument("maxplayers", ConVar.Server.maxplayers.ToString()),
+                new Argument("world_size", ConVar.Server.worldsize.ToString()),
+                new Argument("max_players", ConVar.Server.maxplayers.ToString()),
                 new Argument("tags", ConVar.Server.tags),
                 new Argument("url", ConVar.Server.url)
             );
