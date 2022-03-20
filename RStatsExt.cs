@@ -102,6 +102,16 @@ namespace Oxide.Ext.RStats
             );
 
             stream.Write(packet.bytes, 0, packet.bytes.Length);
+
+            int result = stream.ReadByte();
+
+            if (result == 0)
+            {
+                Printer.logErr("master server refused the connection");
+                stream.Close();
+                return;
+            }
+
             stream.Close();
         }
 
