@@ -14,7 +14,14 @@ namespace Oxide.Plugins
 
         void OnServerInitialized(bool initial)
         {
-            client = new StatsClient();
+            try
+            {
+                client = new StatsClient();
+            }
+            catch(Exception e)
+            {
+                Printer.logErr("Can't start the client [{0}]!", e);
+            }
         }
     }
 }
